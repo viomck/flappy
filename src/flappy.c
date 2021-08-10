@@ -72,7 +72,8 @@ bool PipeIsNear(int tiles[TILE_WIDTH][TILE_HEIGHT], int x)
     return false;
 }
 
-int GetRandomPipeX(int tiles[TILE_WIDTH][TILE_HEIGHT], int startX) {
+int GetRandomPipeX(int tiles[TILE_WIDTH][TILE_HEIGHT], int startX) 
+{
     int posX = GetRandomValue(startX, TILE_WIDTH - 2);
 
     if (PipeIsNear(tiles, posX)) 
@@ -194,7 +195,8 @@ int main(void)
                 tiles[birdX][birdY] = TILE_NIL; // Remove bird
                 birdY++;
 
-                if (birdY == TILE_HEIGHT) {
+                if (birdY == TILE_HEIGHT) 
+                {
                     go = false;
                 }
 
@@ -209,7 +211,8 @@ int main(void)
                 tiles[birdX][birdY] = TILE_NIL; // Remove bird
                 birdY -= 1;
 
-                if (tiles[birdX][birdY] == TILE_PIPE) {
+                if (tiles[birdX][birdY] == TILE_PIPE) 
+                {
                     go = false;
                     score--;
                 }
